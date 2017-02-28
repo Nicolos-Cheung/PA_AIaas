@@ -1,0 +1,128 @@
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.cl {
+  clear: both;
+}
+.b {
+  font-weight: bold;
+}
+.i {
+  font-style: italic;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.tl {
+  text-align: left;
+}
+.tdl {
+  text-decoration: underline;
+}
+.tdn,
+.tdn:hover,
+a.tdl:hover {
+  text-decoration: none;
+}
+.g0 {
+  color: #000000;
+}
+.g3 {
+  color: #333333;
+}
+.g6 {
+  color: #666666;
+}
+.g9 {
+  color: #999999;
+}
+.red {
+  color: red;
+}
+.wh {
+  color: white;
+}
+.vm {
+  vertical-align: middle;
+}
+.vtb {
+  vertical-align: text-bottom;
+}
+.vt {
+  vertical-align: top;
+}
+.vn {
+  vertical-align: -2px;
+}
+.vimg {
+  margin-bottom: -3px;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.dn {
+  display: none;
+}
+.db {
+  display: block;
+}
+.dib {
+  -moz-inline-stack: inline-block;
+  display: inline-block;
+}
+.di {
+  display: inline;
+}
+.ovh {
+  overflow: hidden;
+}
+.ovs {
+  overflow: scroll;
+}
+.vh {
+  visibility: hidden;
+}
+.vv {
+  visibility: visible;
+}
+.fix {
+  *zoom: 1;
+}
+.fix:after,
+.fix:before {
+  display: block;
+  content: "";
+}
+.fix:after {
+  clear: both;
+}
+.z {
+  _zoom: 1;
+}
+a {
+  color: #333333;
+}
+a:hover {
+  color: #f05a23;
+  text-decoration: none;
+}
+/*page*/
+header,
+main,
+footer {
+  width: 100%;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px;
+}

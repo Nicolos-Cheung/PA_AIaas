@@ -1,0 +1,324 @@
+/*CSS reset*/
+body{
+    /*line-height:1.4;*/
+    color:#979797;
+    font-family:arial;
+    font-size: 12px;
+}
+input,textarea,select{
+    font-size:12px;
+    font-size:100%;
+    font-family:arial;
+    font-family:inherit;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form,fieldset{
+    margin:0;
+}
+fieldset{
+    padding: 0;
+}
+h4,h5,h6{
+    font-size:1em;
+}
+ul,ol{
+    padding-left:0;
+    list-style-type:none;
+}
+img{border:0;}
+a{
+    text-decoration: none;
+    color: #979797;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/*common.css*/
+.l {
+    float: left;
+}
+
+.r {
+    float: right;
+}
+
+.cl {
+    clear: both;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tl {
+    text-align: left;
+}
+
+.vm {
+    vertical-align: middle;
+}
+
+.vtb {
+    vertical-align: text-bottom;
+}
+
+.vt {
+    vertical-align: top;
+}
+
+.rel {
+    position: relative;
+}
+
+.abs {
+    position: absolute;
+}
+
+.dn {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    -moz-inline-stack: inline-block;
+    display: inline-block;
+}
+
+.di {
+    display: inline;
+}
+
+.ovh {
+    overflow: hidden;
+}
+
+.ovs {
+    overflow: scroll;
+}
+
+.vh {
+    visibility: hidden;
+}
+
+.vv {
+    visibility: visible;
+}
+
+
+/*page*/
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+
+.container:before,
+.container:after {
+    display: table;
+    content: "";
+}
+.container:after {
+    clear: both;
+}
+
+/*header*/
+header{
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+}
+header .container{
+    padding-left: 30px;
+    padding-right: 30px
+}
+header img{
+    float: left;
+    margin-top: 15px;
+}
+header a{
+    float: right;
+    padding-left: 16px;
+    background: url(/PADL_AIaas/Views/image/login-home.png) left center no-repeat;
+    line-height: 60px;
+    font-size: 12px;
+}
+/*main*/
+main .container{
+    font-size: 0;
+}
+
+#register-wrap{
+    box-sizing: border-box;
+    width: 638px;
+    height: 488px;
+    border: 1px solid #c8c8c8;
+    padding: 0 40px;
+    margin: 120px auto 0 auto;
+    font-size: 12px;
+}
+#register-wrap h3{
+    width: 368px;
+    padding: 30px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #323232;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+/*RegisterForm*/
+#RegisterForm .wrapper{
+    height: 38px;
+}
+#RegisterForm [class$='rapper']{
+    margin-bottom: 20px;
+}
+#RegisterForm .reg-label{
+    display: inline-block;
+    width: 56px;
+}
+#RegisterForm .baseInput{
+    box-sizing: border-box;
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    outline: none;
+}
+#RegisterForm #verifyCode{
+    width: 170px;
+}
+#RegisterForm .getVerifyCode{
+    position: relative;
+    top: -1px;
+    width: 120px;
+    height: 38px;
+    margin-left: 5px;
+    border: 1px solid #c8c8c8;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #f0f0f0;
+    color: #656565;
+}
+#RegisterForm .isAgreeWrapper{
+    position: relative;
+    padding-left: 16px;
+    margin-left: 68px;
+}
+#RegisterForm .isAgreeWrapper label{
+    position: absolute;
+    top:0;
+    left:0;
+    display: inline-block;
+    width: 10px;
+    height:10px;
+    border: 1px solid #c8c8c8;
+    border-radius: 2px;
+}
+#isAgreeWrapper input[type=radio]:checked + label {
+    border-color: #f05a23;
+    background-image: url("/PADL_AIaas/Views/image/agree.png");
+}
+#RegisterForm input:not(:last-child):hover{
+    border-color: #f05a23;
+}
+#RegisterForm input[type=submit]{
+    height: 40px;
+    margin-left: 68px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    background-color: #f05a23;
+}
+#RegisterForm #isAgree{
+    display: none;
+}
+#isAgreeWrapper a{
+    color: #f05a23;
+}
+
+input{ border: 1px solid #ddd; }
+.text-input-focus{ border-color: #488ee7;outline: none; }
+/*#reg{}*/
+/*#RegisterForm{ width: 720px; margin: 0 auto; }*/
+/*#RegisterForm fieldset{padding: 20px 0 20px 20px; border: none; }*/
+/*#RegisterForm fieldset>h1{ padding-left:200px; }*/
+/*#RegisterForm legend{display:none; }*/
+/*#RegisterForm .wrapper{ height: 42px; font-size: 0; -webkit-text-size-adjust:none; }*/
+/*#RegisterForm .wrapper label{ display: inline-block; width: 75px; height: 42px; font-size: 14px; color: #666; font-weight: 700; margin-right: 10px; line-height: 42px; text-align: right; }*/
+/*#RegisterForm .wrapper input{ position: relative; height: 16px; width: 308px; padding: 11px 10px; margin-right: 10px; font-size: 14px; color: #666; }*/
+/*#RegisterForm .need{ display: inline-block; width:10px; color:#b20202; }*/
+/*#RegisterForm .isAgree{ margin-left: 85px; }*/
+/*#RegisterForm .submitWrapper{ position: relative; left: 85px; }*/
+/*#RegisterForm .subBtn{ background-color: #3f89ec; width: 330px; height: 50px; font-size: 16px; font-weight: 700; cursor: pointer; color: #fff; border: 0; border-radius: 3px; }*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========以下部分是Validform必须的===========*/
+.Validform_checktip{
+    margin-left:8px;
+    line-height:42px;
+    height:20px;
+    overflow:hidden;
+    color:#999;
+    font-size:12px;
+}
+.Validform_right{
+    color:#71b83d;
+    padding-left:20px;
+    background:url(../images/right.png) no-repeat left center;
+}
+.Validform_wrong{
+    color:red;
+    padding-left:20px;
+    white-space:nowrap;
+    background:url(../images/error.png) no-repeat left center;
+}
+.Validform_loading{
+    padding-left:20px;
+    background:url(../images/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+    /*background-color:#ffe7e7;*/
+    border-color: red;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
