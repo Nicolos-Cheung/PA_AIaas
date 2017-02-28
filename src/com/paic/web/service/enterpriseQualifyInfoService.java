@@ -4,29 +4,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.enterpriseQualifyInfoDao;
+import com.paic.web.dao.EnterpriseQualifyInfoDao;
 
 
-import com.paic.web.entity.enterpriseQualifyInfo;
+import com.paic.web.entity.EnterpriseQualifyInfo;
 
 @Transactional
 @Service
-public class enterpriseQualifyInfoService
+public class EnterpriseQualifyInfoService
 {
     @Autowired
-    private enterpriseQualifyInfoDao  enterprisequalifyinfodao;
+    private EnterpriseQualifyInfoDao  enterprisequalifyinfodao;
 
     /**
      * 增加企业实名认证信息
     */
-    public void addEnterpriseQualifyInfo(enterpriseQualifyInfo qualifyInfo)
+    public void addEnterpriseQualifyInfo(EnterpriseQualifyInfo qualifyInfo)
     {
         enterprisequalifyinfodao.addEnterpriseQualifyInfo(qualifyInfo);
     }
     /**
      * 删除企业实名认证信息
     */
-    public void deleteEnterpriseQualifyInfo(enterpriseQualifyInfo qualifyInfo)
+    public void deleteEnterpriseQualifyInfo(EnterpriseQualifyInfo qualifyInfo)
     {
         enterprisequalifyinfodao.deleteEnterpriseQualifyInfo(qualifyInfo);
     }

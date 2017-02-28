@@ -4,20 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.personalQualifyInfoDao;
-import com.paic.web.entity.personalQualifyInfo;
+import com.paic.web.dao.PersonalQualifyInfoDao;
+import com.paic.web.entity.PersonalQualifyInfo;
 
 
 @Transactional
 @Service
-public class personalQualifyInfoService
+public class PersonalQualifyInfoService
 {
     @Autowired
-    private personalQualifyInfoDao personalqualifyinfodao;
+    private PersonalQualifyInfoDao personalqualifyinfodao;
     /**
      * 添加个人认证证书信息
     */
-    public void addPersonalCertificateInfo(personalQualifyInfo personalqualifyinfo)
+    public void addPersonalCertificateInfo(PersonalQualifyInfo personalqualifyinfo)
     {
         personalqualifyinfodao.addPersonalCertificateInfo(personalqualifyinfo);
     }

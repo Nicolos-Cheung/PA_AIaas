@@ -4,48 +4,48 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.baseInfoDao;
-import com.paic.web.entity.baseInfo;
+import com.paic.web.dao.BaseInfoDao;
+import com.paic.web.entity.BaseInfo;
 
 
 @Transactional
 @Service
-public class baseInfoService
+public class BaseInfoService
 {
     @Autowired
-    private baseInfoDao baseinfodao;
+    private BaseInfoDao baseinfodao;
     /**
      * 根据用户名获取用户基本信息
     */
-    public baseInfo getBaseInfoByUsername(String username)
+    public BaseInfo getBaseInfoByUsername(String username)
     {
         return baseinfodao.getBaseInfoByUsername(username);
     }
     /**
      * 根据电话号码获取用户基本信息
     */
-    public baseInfo getBaseInfoByTelnumber(String telnumber)
+    public BaseInfo getBaseInfoByTelnumber(String telnumber)
     {
         return baseinfodao.getBaseInfoByTelnumber(telnumber);
     }
     /**
      * 根据uuid获取用户基本信息
     */
-    public baseInfo getBaseInfoByUserID(String userID)
+    public BaseInfo getBaseInfoByUserID(String userID)
     {
         return baseinfodao.getBaseInfoByUserID(userID);
     }
     /**
      * 根据邮件地址获取用户基本信息
     */
-    public baseInfo getBaseInfoByEmail(String email)
+    public BaseInfo getBaseInfoByEmail(String email)
     {
         return baseinfodao.getBaseInfoByEmail(email);
     }
     /**
      * 更新用户全部基本信息
     */
-    public void updateBaseInfo(baseInfo baseinfo)
+    public void updateBaseInfo(BaseInfo baseinfo)
     {
         baseinfodao.updateBaseInfo(baseinfo);
     }

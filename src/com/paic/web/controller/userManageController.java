@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.paic.web.entity.userInfo;
+import com.paic.web.entity.UserInfo;
 import com.paic.web.form.UserForm;
-import com.paic.web.service.userService;
+import com.paic.web.service.UserService;
 
 @Controller
-public class userManageController 
+public class UserManageController 
 {
 	@Autowired
-    public userService userservice;
+    public UserService userservice;
 	@RequestMapping("index")
     public ModelAndView index()
 	{  
@@ -43,7 +43,7 @@ public class userManageController
 		String name = user.getUsername();
 		String passwd = user.getPassword();
 		System.out.println(name + ":" + passwd);
-		userInfo userinfo = new userInfo();
+		UserInfo userinfo = new UserInfo();
 		userinfo = userservice.getUserByUserName(name);
 		if(userinfo != null)
 		{
@@ -82,7 +82,7 @@ public class userManageController
 	public ModelAndView register(UserForm user)
 	{  
 		System.out.println("registerAction"); 
-		userInfo userinfo = new userInfo();
+		UserInfo userinfo = new UserInfo();
 		userinfo.setUsername(user.getUsername());
 		userinfo.setPassword(user.getPassword());
 		userinfo.setTelnumber(user.getTelnum());
@@ -104,7 +104,7 @@ public class userManageController
 	public @ResponseBody String sendMessage(UserForm user)
 	{
 		System.out.println("发送短信");
-		userInfo userinfo = new userInfo();
+		UserInfo userinfo = new UserInfo();
 		userinfo = userservice.getUserByTelnum(user.getTelnum());
 		if(userinfo == null)
 		{

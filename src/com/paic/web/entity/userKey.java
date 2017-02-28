@@ -12,9 +12,9 @@ import javax.persistence.Table;
  */
 @Entity()
 @Table(name = "userkey")
-public class userKey
+public class UserKey
 {
-    public userKey()
+    public UserKey()
     {
         super();
     }

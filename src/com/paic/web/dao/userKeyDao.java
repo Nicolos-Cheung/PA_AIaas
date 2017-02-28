@@ -11,12 +11,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.userKey;
+import com.paic.web.entity.UserKey;
 
 
 
 @Repository
-public class userKeyDao
+public class UserKeyDao
 {
     @Resource
     private SessionFactory sessionFactory;
@@ -33,7 +33,7 @@ public class userKeyDao
     /**
      * 创建accesskey
      */
-    public void addUserKey(userKey userkey)
+    public void addUserKey(UserKey userkey)
     {
         Session session = this.getSession();
         session.beginTransaction();

@@ -8,12 +8,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.enterpriseInvoiceInfo;
+import com.paic.web.entity.EnterpriseInvoiceInfo;
 
 
 
 @Repository
-public class enterpriseInvoiceInfoDao
+public class EnterpriseInvoiceInfoDao
 {
     @Resource
     private SessionFactory sessionFactory;
@@ -29,7 +29,7 @@ public class enterpriseInvoiceInfoDao
     /**
      * 增加企业增值税发票信息
      */
-    public void addEnterpriseInvoiceInfo(enterpriseInvoiceInfo enterpriseinvoiceinfo)
+    public void addEnterpriseInvoiceInfo(EnterpriseInvoiceInfo enterpriseinvoiceinfo)
     {
         Session session = this.getSession();
         session.beginTransaction();        

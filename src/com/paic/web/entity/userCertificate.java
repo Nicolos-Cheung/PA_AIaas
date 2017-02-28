@@ -13,9 +13,9 @@ import javax.persistence.Table;
  */
 @Entity()
 @Table(name = "userCertificate")
-public class userCertificate
+public class UserCertificate
 {
-	public userCertificate()
+	public UserCertificate()
 	{
 		super();
 	}

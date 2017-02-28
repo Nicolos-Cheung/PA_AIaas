@@ -12,9 +12,9 @@ import javax.persistence.Table;
  */
 @Entity()
 @Table(name = "contact")
-public class contact
+public class Contact
 {
-    public contact()
+    public Contact()
     {
         super();
     }

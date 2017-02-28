@@ -5,21 +5,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.userInfoDao;
-import com.paic.web.entity.userInfo;
+import com.paic.web.dao.UserInfoDao;
+import com.paic.web.entity.UserInfo;
 
 @Transactional 
 @Service
-public class userService 
+public class UserService 
 {
 	@Autowired
-	private userInfoDao userinfodao;
+	private UserInfoDao userinfodao;
     
     /**
      * 添加
      * @param user
      */
-    public void addUser(userInfo user) {
+    public void addUser(UserInfo user) {
     	userinfodao.addUser(user);
     }
     /**
@@ -27,17 +27,17 @@ public class userService
      * @param username
      * @return
      */
-    public userInfo getUserByUserName(String username){
+    public UserInfo getUserByUserName(String username){
         return userinfodao.getUserByUserName(username);
     }
-    public userInfo getUserByTelnum(String telnum){
+    public UserInfo getUserByTelnum(String telnum){
         return userinfodao.getUserByTelnum(telnum);
     }
     /**
      * 更新
      * @param user
      */
-    public void updateUser(userInfo user) {
+    public void updateUser(UserInfo user) {
     	userinfodao.updateUser(user);
     }
     /**
@@ -51,7 +51,7 @@ public class userService
      * 查询所有
      * @return
      */
-    public List<userInfo> getUsers() {
+    public List<UserInfo> getUsers() {
         return userinfodao.getUser();
     }
 }

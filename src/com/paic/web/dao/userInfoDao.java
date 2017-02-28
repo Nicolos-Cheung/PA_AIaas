@@ -9,10 +9,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.userInfo;
+import com.paic.web.entity.UserInfo;
 
 @Repository
-public class userInfoDao
+public class UserInfoDao
 {
 	@Resource
 	private SessionFactory sessionFactory;
@@ -28,7 +28,7 @@ public class userInfoDao
     }
 
     @SuppressWarnings("unchecked")
-	public List<userInfo> getAllUser(){
+	public List<UserInfo> getAllUser(){
         String hsql="from userInfo";
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery(hsql);
@@ -40,19 +40,19 @@ public class userInfoDao
      * @param username
      * @return
      */
-    public userInfo getUserByUserName(String username) 
+    public UserInfo getUserByUserName(String username) 
     {
-        return (userInfo) this.getSession().createQuery("from userInfo where username=?").setParameter(0, username).uniqueResult();
+        return (UserInfo) this.getSession().createQuery("from userInfo where username=?").setParameter(0, username).uniqueResult();
     }
-    public userInfo getUserByTelnum(String telnum) 
+    public UserInfo getUserByTelnum(String telnum) 
     {
-        return (userInfo) this.getSession().createQuery("from userInfo where username=?").setParameter(0, telnum).uniqueResult();
+        return (UserInfo) this.getSession().createQuery("from userInfo where username=?").setParameter(0, telnum).uniqueResult();
     }
     /**
      * 添加
      * @param person
      */
-    public void addUser(userInfo user) 
+    public void addUser(UserInfo user) 
     {
     	this.getSession().save(user);
     }
@@ -60,7 +60,7 @@ public class userInfoDao
      * 更新
      * @param person
      */
-    public void updateUser(userInfo user) {
+    public void updateUser(UserInfo user) {
         this.getSession().update(user);
     }
     /**
@@ -75,7 +75,7 @@ public class userInfoDao
      * @return
      */
     @SuppressWarnings("unchecked")
-    public List<userInfo> getUser() {
-        return this.getSession().createCriteria(userInfo.class).list();
+    public List<UserInfo> getUser() {
+        return this.getSession().createCriteria(UserInfo.class).list();
     }
 }

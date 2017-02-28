@@ -4,21 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.userKeyDao;
-import com.paic.web.entity.userKey;
+import com.paic.web.dao.UserKeyDao;
+import com.paic.web.entity.UserKey;
 
 
 @Transactional
 @Service
-public class userKeyService
+public class UserKeyService
 {
     @Autowired
-    private userKeyDao userkeydao;
+    private UserKeyDao userkeydao;
 
     /**
      * 增加用户密钥
     */
-    public void addUserKey(userKey userkey)
+    public void addUserKey(UserKey userkey)
     {
         userkeydao.addUserKey(userkey);
     }

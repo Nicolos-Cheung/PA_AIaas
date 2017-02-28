@@ -8,7 +8,7 @@ import org.springframework.web.portlet.ModelAndView;
  * 用户管理中心
  */
 @Controller
-public class userManageCenterController
+public class UserManageCenterController
 {
     //用户中心
     @RequestMapping(value = "userInfoAction",method = RequestMethod.POST)

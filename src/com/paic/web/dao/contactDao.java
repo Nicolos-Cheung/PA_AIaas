@@ -8,12 +8,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.contact;
+import com.paic.web.entity.Contact;
 
 
 
 @Repository
-public class contactDao
+public class ContactDao
 {
     @Resource
     public SessionFactory sessionFactory;
@@ -32,7 +32,7 @@ public class contactDao
     /**
      * 增加联系人
      */
-    public void addContact(contact contactuser)
+    public void addContact(Contact contactuser)
     {
         Session session = this.getSession();
         session.beginTransaction();
@@ -43,7 +43,7 @@ public class contactDao
     /**
      * 删除联系人
      */
-    public void deleteContact(contact contactuser)
+    public void deleteContact(Contact contactuser)
     {
         Session session = this.getSession();
         session.beginTransaction();

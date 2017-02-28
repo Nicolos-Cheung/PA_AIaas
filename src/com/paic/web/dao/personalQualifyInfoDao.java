@@ -6,12 +6,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.personalQualifyInfo;
+import com.paic.web.entity.PersonalQualifyInfo;
 
 
 
 @Repository
-public class personalQualifyInfoDao
+public class PersonalQualifyInfoDao
 {
     @Resource
     private SessionFactory sessionFactory;
@@ -26,7 +26,7 @@ public class personalQualifyInfoDao
     /**
      * 添加个人认证证书
      */
-    public void addPersonalCertificateInfo(personalQualifyInfo personalqualifyinfo)
+    public void addPersonalCertificateInfo(PersonalQualifyInfo personalqualifyinfo)
     {
         Session session = this.getsession();
         session.beginTransaction();

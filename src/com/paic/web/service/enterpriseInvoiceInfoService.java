@@ -4,22 +4,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.paic.web.dao.enterpriseInvoiceInfoDao;
-import com.paic.web.entity.enterpriseInvoiceInfo;
+import com.paic.web.dao.EnterpriseInvoiceInfoDao;
+import com.paic.web.entity.EnterpriseInvoiceInfo;
 
 
 
 @Transactional
 @Service
-public class enterpriseInvoiceInfoService
+public class EnterpriseInvoiceInfoService
 {
     @Autowired
-    private enterpriseInvoiceInfoDao enterpriseinvoiceinfodao;
+    private EnterpriseInvoiceInfoDao enterpriseinvoiceinfodao;
 
     /**
     *增加企业增值税发票信息 
     */
-    public void addEnterpriseInvoiceInfo(enterpriseInvoiceInfo enterpriseinvoiceinfo)
+    public void addEnterpriseInvoiceInfo(EnterpriseInvoiceInfo enterpriseinvoiceinfo)
     {
         enterpriseinvoiceinfodao.addEnterpriseInvoiceInfo(enterpriseinvoiceinfo);
     }

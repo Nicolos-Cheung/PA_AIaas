@@ -11,11 +11,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.baseInfo;
+import com.paic.web.entity.BaseInfo;
 
 
 @Repository
-public class baseInfoDao
+public class BaseInfoDao
 {
     @Resource
     private SessionFactory sessionFactory;
@@ -32,36 +32,36 @@ public class baseInfoDao
     /**
      * 根据username获取baseinfo对象
      */
-    public baseInfo getBaseInfoByUsername(String username)
+    public BaseInfo getBaseInfoByUsername(String username)
     {
-        return (baseInfo)this.getSession().createQuery("from baseInfo where username = ?").setParameter(0, "username").uniqueResult();
+        return (BaseInfo)this.getSession().createQuery("from baseInfo where username = ?").setParameter(0, "username").uniqueResult();
     }
     /**
      * 根据电话号码获取baseinfo对象
      */
-    public baseInfo getBaseInfoByTelnumber(String telnumber)
+    public BaseInfo getBaseInfoByTelnumber(String telnumber)
     {
-        return (baseInfo)this.getSession().createQuery("from baseInfo where telnumber = ?").setParameter(0, telnumber).uniqueResult();
+        return (BaseInfo)this.getSession().createQuery("from baseInfo where telnumber = ?").setParameter(0, telnumber).uniqueResult();
     }
     /**
      * 根据email获取baseinfo对象
      */
-    public baseInfo getBaseInfoByEmail(String email)
+    public BaseInfo getBaseInfoByEmail(String email)
     {
-        return (baseInfo)this.getSession().createQuery("from baseInfo where email = ?").setParameter(0, email).uniqueResult();
+        return (BaseInfo)this.getSession().createQuery("from baseInfo where email = ?").setParameter(0, email).uniqueResult();
     }
     /**
      * 根据userID获取baseinfo对象
      */
-    public baseInfo getBaseInfoByUserID(String userID)
+    public BaseInfo getBaseInfoByUserID(String userID)
     {
-        return (baseInfo)this.getSession().createQuery("from baseInfo where userID = ?").setParameter(0, userID).uniqueResult();
+        return (BaseInfo)this.getSession().createQuery("from baseInfo where userID = ?").setParameter(0, userID).uniqueResult();
     }
 
     /**
      * 根据uuid更新基本信息
      */
-    public void updateBaseInfo(baseInfo baseinfo)
+    public void updateBaseInfo(BaseInfo baseinfo)
     {
         //this.getSession().update(baseinfo);
         Session session = this.getSession();

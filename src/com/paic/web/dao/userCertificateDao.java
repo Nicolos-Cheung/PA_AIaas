@@ -13,11 +13,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.paic.web.entity.userCertificate;
+import com.paic.web.entity.UserCertificate;
 
 
 @Repository
-public class userCertificateDao
+public class UserCertificateDao
 {
     @Resource
     private SessionFactory sessionFactory;
@@ -34,7 +34,7 @@ public class userCertificateDao
     /**
      * 增加证书
      */
-    public void addUserCertificate(userCertificate usercertificate)
+    public void addUserCertificate(UserCertificate usercertificate)
     {
         Session session = this.getSession();
         session.beginTransaction();
@@ -45,7 +45,7 @@ public class userCertificateDao
     /**
      * 删除证书
      */
-    public void deleteUserCertificate(userCertificate usercertificate)
+    public void deleteUserCertificate(UserCertificate usercertificate)
     {
         Session session = this.getSession();
         session.beginTransaction();
@@ -56,7 +56,7 @@ public class userCertificateDao
     /**
      * 返回用户证书列表
      */
-    public List<userCertificate> getUserCertificate(String userID)
+    public List<UserCertificate> getUserCertificate(String userID)
     {
         Session session = this.getSession();
         session.beginTransaction();

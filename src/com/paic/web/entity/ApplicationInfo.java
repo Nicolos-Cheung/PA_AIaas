@@ -7,11 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
 @Entity()
-@Table(name = "applicationList")
-public class ApplicationList
+@Table(name = "applicationInfo")
+public class ApplicationInfo
 {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -49,5 +47,53 @@ public class ApplicationList
      */
     @Column(name = "CreateTime",length = 32)
     private String CreateTime;
+
+	public String getUserID() {
+		return userID;
+	}
+
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
+
+	public String getApplicationname() {
+		return applicationname;
+	}
+
+	public void setApplicationname(String applicationname) {
+		this.applicationname = applicationname;
+	}
+
+	public String getAppID() {
+		return AppID;
+	}
+
+	public void setAppID(String appID) {
+		AppID = appID;
+	}
+
+	public String getAPIKey() {
+		return APIKey;
+	}
+
+	public void setAPIKey(String aPIKey) {
+		APIKey = aPIKey;
+	}
+
+	public String getSecretKey() {
+		return SecretKey;
+	}
+
+	public void setSecretKey(String secretKey) {
+		SecretKey = secretKey;
+	}
+
+	public String getCreateTime() {
+		return CreateTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		CreateTime = createTime;
+	}
 
 }

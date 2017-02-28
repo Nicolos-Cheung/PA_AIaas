@@ -13,9 +13,9 @@ import javax.persistence.Table;
  */
 @Entity()
 @Table(name = "enterpriseQualifyInfo")
-public class enterpriseQualifyInfo
+public class EnterpriseQualifyInfo
 {
-    public enterpriseQualifyInfo()
+    public EnterpriseQualifyInfo()
     {
         super();
     }
